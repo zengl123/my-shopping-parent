@@ -2,9 +2,11 @@ package com.zl.study.member.impl;
 
 import com.zl.study.common.base.BaseApiService;
 import com.zl.study.common.base.ResponseBase;
+import com.zl.study.common.security.Md5Util;
 import com.zl.study.domain.po.MemberUser;
 import com.zl.study.member.dao.MemberDao;
 import com.zl.study.service.IMemberService;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,11 +29,17 @@ public class MemberServiceImpl extends BaseApiService implements IMemberService 
 
     @Override
     public ResponseBase registered(@RequestBody MemberUser memberUser) {
+        String password = memberUser.getPassword();
+        if (StringUtils.isEmpty(password)) {
+            return error("密码不能为空");
+        }
+        String newPassword = Md5Util.Md5EncodeUtf8Salt(password);
+        memberUser.setPassword(newPassword);
         Integer result = memberDao.insertUser(memberUser);
         if(result<=0) {
-            return error("");
+            return error("注册失败");
         }
-        return success();
+        return success("注册成功");
     }
 
     @Override

@@ -17,7 +17,7 @@ import lombok.Data;
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class MemberUser extends BasePo{
-    private String username;
+    private String userName;
     private String password;
     private String phone;
     private String email;

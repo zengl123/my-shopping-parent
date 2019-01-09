@@ -1,5 +1,6 @@
 package com.zl.study.common.security;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,9 +16,8 @@ import java.security.MessageDigest;
  * @Version
  * @Modified By
  */
+@Slf4j
 public class Md5Util {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(Md5Util.class);
 
     private static final String[] HEX_DIGITS = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"};
 
@@ -60,7 +60,7 @@ public class Md5Util {
             }
         } catch (Exception exception) {
             resultString = "";
-            LOGGER.error("Md5加密异常,error={}", exception);
+            log.error("Md5加密异常:{}", exception);
         }
         return resultString;
     }
