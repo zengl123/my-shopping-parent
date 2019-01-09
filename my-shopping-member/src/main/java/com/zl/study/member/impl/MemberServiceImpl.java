@@ -1,13 +1,12 @@
 package com.zl.study.member.impl;
 
-import com.zl.study.common.base.ResponseBase;
 import com.zl.study.common.base.BaseApiService;
+import com.zl.study.common.base.ResponseBase;
 import com.zl.study.domain.po.MemberUser;
 import com.zl.study.member.dao.MemberDao;
 import com.zl.study.service.IMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**

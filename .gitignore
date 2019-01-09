@@ -1,0 +1,10 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+my-shopping-api/my-shopping-api-member/src/main/java/com/zl/study/domain/vo/
+my-shopping-api/my-shopping-api-member/target/
+my-shopping-common/src/test/java/com/zl/study/eureka/
+my-shopping-common/target/
+my-shopping-eureka-server/target/
+my-shopping-member/target/
+my-shopping-message/src/main/java/com/zl/study/activemq/
+my-shopping-parent.iml
