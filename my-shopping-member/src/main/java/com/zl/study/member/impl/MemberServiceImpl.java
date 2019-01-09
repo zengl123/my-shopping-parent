@@ -8,7 +8,6 @@ import com.zl.study.member.dao.MemberDao;
 import com.zl.study.service.IMemberService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -28,7 +27,7 @@ public class MemberServiceImpl extends BaseApiService implements IMemberService 
     private MemberDao memberDao;
 
     @Override
-    public ResponseBase registered(@RequestBody MemberUser memberUser) {
+    public ResponseBase registered(MemberUser memberUser) {
         String password = memberUser.getPassword();
         if (StringUtils.isEmpty(password)) {
             return error("密码不能为空");
@@ -36,7 +35,7 @@ public class MemberServiceImpl extends BaseApiService implements IMemberService 
         String newPassword = Md5Util.Md5EncodeUtf8Salt(password);
         memberUser.setPassword(newPassword);
         Integer result = memberDao.insertUser(memberUser);
-        if(result<=0) {
+        if (result <= 0) {
             return error("注册失败");
         }
         return success("注册成功");
@@ -44,6 +43,9 @@ public class MemberServiceImpl extends BaseApiService implements IMemberService 
 
     @Override
     public ResponseBase findMemberUserById(String memberUserId) {
+        if (StringUtils.isEmpty(memberUserId)) {
+            return error("会员ID不能为空");
+        }
         MemberUser memberUser = memberDao.findById(memberUserId);
         if (memberUser == null) {
             return error("会员ID不存在");

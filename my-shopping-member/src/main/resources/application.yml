@@ -20,7 +20,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/my-shopping-member
     username: root
-    password:
+    password: 123456
       ###################以下为druid增加的配置###########################
       # 下面为连接池的补充设置，应用到上面所有数据源中
       # 初始化大小，最小，最大

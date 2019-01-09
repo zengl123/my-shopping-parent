@@ -8,3 +8,5 @@ my-shopping-eureka-server/target/
 my-shopping-member/target/
 my-shopping-message/src/main/java/com/zl/study/activemq/
 my-shopping-parent.iml
+*.iml
+

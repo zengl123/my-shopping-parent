@@ -2,7 +2,9 @@ package com.zl.study.service;
 
 import com.zl.study.common.base.ResponseBase;
 import com.zl.study.domain.po.MemberUser;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import javax.lang.model.SourceVersion;
 
 /**
  * @Description
@@ -19,10 +21,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface IMemberService {
     /**
      * 会员注册
+     *
      * @param memberUser
      * @return
      */
-    ResponseBase registered(MemberUser memberUser);
+    ResponseBase registered(@RequestBody MemberUser memberUser);
 
     /**
      * 根据ID查询会员用户信息
@@ -30,6 +33,6 @@ public interface IMemberService {
      * @param memberUserId
      * @return
      */
-    @RequestMapping(value = "findMemberUserById")
-    ResponseBase findMemberUserById(String memberUserId);
+    @RequestMapping(value = "findMemberUserById", method = RequestMethod.GET)
+    ResponseBase findMemberUserById(@PathVariable(value = "id") String memberUserId);
 }

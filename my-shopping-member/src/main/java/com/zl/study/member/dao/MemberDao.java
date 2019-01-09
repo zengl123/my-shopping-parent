@@ -25,7 +25,7 @@ public interface MemberDao {
      * @param memberUser
      * @return
      */
-    @Insert("insert into `mb_user` (username,password,phone,email) value ()")
+    @Insert("insert into `member_user` (username,password,phone,email) value ()")
     Integer insertUser(MemberUser memberUser);
 
     /**
@@ -34,6 +34,6 @@ public interface MemberDao {
      * @param id
      * @return
      */
-    @Select("select id,username,phone,email from `member_user` where id=#{id}")
-    MemberUser findById(@Param("userId") String id);
+    @Select("select id,user_name as userName,phone,email from `member_user` where id=#{id}")
+    MemberUser findById(@Param("id") String id);
 }

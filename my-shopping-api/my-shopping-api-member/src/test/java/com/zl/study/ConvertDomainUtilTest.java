@@ -3,7 +3,6 @@ package com.zl.study;
 import com.zl.study.common.utils.ConvertDomainUtil;
 import com.zl.study.domain.po.MemberUser;
 import org.junit.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Map;
 
@@ -18,13 +17,12 @@ import java.util.Map;
  * @Version 1.0
  * @Modified By
  */
-@SpringBootTest
 public class ConvertDomainUtilTest {
 
     @Test
-    public void test(){
-        MemberUser memberUser=new MemberUser();
-        memberUser.setUsername("测试");
+    public void test() {
+        MemberUser memberUser = new MemberUser();
+        memberUser.setUserName("测试");
         Map map = ConvertDomainUtil.convertObject(MemberUser.class, Map.class, "username");
         System.out.println("map = " + map);
     }

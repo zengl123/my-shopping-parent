@@ -1,5 +1,6 @@
 package com.zl.study.domain.po;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.zl.study.domain.po.BasePo;
 import lombok.Data;
