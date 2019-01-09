@@ -16,24 +16,6 @@
     <name>my-shopping-member</name>
 
     <dependencies>
-        <!--集成mysql-->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <!--<scope>runtime</scope>-->
-        </dependency>
-        <!--集成mybatis-->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>${mybatis-boot-start.version}</version>
-        </dependency>
-        <!--集成阿里巴巴数据源-->
-         <dependency>
-             <groupId>com.alibaba</groupId>
-             <artifactId>druid-spring-boot-starter</artifactId>
-             <version>${druid.version}</version>
-         </dependency>
         <dependency>
             <groupId>com.zl.study</groupId>
             <artifactId>my-shopping-api-member</artifactId>

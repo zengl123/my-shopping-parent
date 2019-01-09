@@ -1,6 +1,7 @@
 package com.zl.study.domain.po;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.zl.study.domain.po.BasePo;
 import lombok.Data;
 
 /**
@@ -16,7 +17,7 @@ import lombok.Data;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class MemberUser extends BasePo{
+public class MemberUser extends BasePo {
     private String userName;
     private String password;
     private String phone;
