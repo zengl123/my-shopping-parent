@@ -4,14 +4,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <modules>
-        <module>my-shopping-common</module>
-        <module>my-shopping-eureka-server</module>
-        <module>my-shopping-api</module>
-        <module>my-shopping-member</module>
-        <module>my-shopping-message</module>
-    </modules>
-
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -19,9 +11,16 @@
     </parent>
 
     <groupId>com.zl.study</groupId>
-    <artifactId>my-shopping-parent</artifactId>
+    <artifactId>my-shop-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
+    <modules>
+        <module>my-shop-common</module>
+        <module>my-shop-basic</module>
+        <module>my-shop-service-api</module>
+        <module>my-shop-service-impl</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
