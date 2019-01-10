@@ -1,24 +1,15 @@
 package com.zl.study.domain.po;
 
-import com.alibaba.fastjson.annotation.JSONField;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.zl.study.domain.po.BasePo;
 import lombok.Data;
 
 /**
- * @Description
- * @Project my-shopping-parent
- * @Package com.zl.study.domain
- * @ClassName MemberUser
- * @Author 曾灵
- * @QQ|Email 3195690389|17363645521@163.com
- * @Date 2018-10-15 下午11:02
- * @Version 1.0
- * @Modified By
+ * @description 
+ * @author zengling
+ * @date 2019/01/10 18:22
  */
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
 public class MemberUser extends BasePo {
+    private static final long serialVersionUID = 6069664985216709510L;
     private String userName;
     private String password;
     private String phone;

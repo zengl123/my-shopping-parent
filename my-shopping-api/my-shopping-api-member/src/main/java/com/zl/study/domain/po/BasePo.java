@@ -29,4 +29,6 @@ public class BasePo implements Serializable {
     private String createTime;
     @ApiModelProperty(value = "修改时间", hidden = true)
     private String modifiedTime;
+    @ApiModelProperty(value = "是否删除", hidden = true)
+    private String isDeleted;
 }

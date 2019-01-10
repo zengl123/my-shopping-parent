@@ -26,5 +26,4 @@ public class ConvertDomainUtilTest {
         Map map = ConvertDomainUtil.convertObject(MemberUser.class, Map.class, "username");
         System.out.println("map = " + map);
     }
-
 }
