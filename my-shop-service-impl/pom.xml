@@ -13,10 +13,10 @@
     <artifactId>my-shop-service-impl</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>my-shop-service-impl</name>
 
     <modules>
         <module>my-shop-service-impl-member</module>
         <module>my-shop-service-impl-message</module>
+        <module>my-shop-service-impl-wechat</module>
     </modules>
 </project>

@@ -13,7 +13,6 @@
     <artifactId>my-shop-basic-eureka-server</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>mmy-shop-basic-eureka-server</name>
 
     <dependencies>
         <!--集成eureka-->

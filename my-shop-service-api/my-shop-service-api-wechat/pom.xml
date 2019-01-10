@@ -6,16 +6,12 @@
 
     <parent>
         <groupId>com.zl.study</groupId>
-        <artifactId>my-shop-parent</artifactId>
+        <artifactId>my-shop-service-api</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>my-shop-basic</artifactId>
+    <artifactId>my-shop-service-api-wechat</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-
-    <modules>
-        <module>my-shop-basic-eureka-server</module>
-    </modules>
+    <packaging>jar</packaging>
 
 </project>

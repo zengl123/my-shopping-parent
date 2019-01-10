@@ -13,9 +13,14 @@
     <artifactId>my-shop-common</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>my-shop-common</name>
 
     <dependencies>
+        <!--集成httpclient-->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+        <!--集成日期时间依赖-->
         <dependency>
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
