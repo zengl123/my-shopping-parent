@@ -1,5 +1,6 @@
 package com.zl.study.member;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -19,6 +20,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableEurekaClient
 @ComponentScan(basePackages = "com.zl.study")
+@MapperScan(basePackages = "com.zl.study.member.dao")
 public class MemberServer {
     public static void main(String[] args) {
         SpringApplication.run(MemberServer.class, args);

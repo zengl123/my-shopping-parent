@@ -1,14 +1,15 @@
 package com.zl.study.member.impl;
 
+import com.zl.study.api.domain.po.MemberUser;
+import com.zl.study.api.service.IMemberService;
 import com.zl.study.common.base.BaseApiService;
 import com.zl.study.common.base.ResponseBase;
 import com.zl.study.common.security.Md5Util;
-import com.zl.study.api.domain.po.MemberUser;
 import com.zl.study.member.dao.MemberUserMapper;
-import com.zl.study.api.service.IMemberService;
 import org.apache.commons.lang3.StringUtils;
-import org.mybatis.generator.api.dom.java.BaseMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -29,7 +30,7 @@ public class MemberServiceImpl extends BaseApiService implements IMemberService 
 
 
     @Override
-    public ResponseBase register(MemberUser memberUser) {
+    public ResponseBase register(@RequestBody MemberUser memberUser) {
         String password = memberUser.getPassword();
         if (StringUtils.isEmpty(password)) {
             return error("密码不能为空");
@@ -44,7 +45,7 @@ public class MemberServiceImpl extends BaseApiService implements IMemberService 
     }
 
     @Override
-    public ResponseBase findMemberUserById(String memberUserId) {
+    public ResponseBase findMemberUserById(@PathVariable("id") String memberUserId) {
         if (StringUtils.isEmpty(memberUserId)) {
             return error("会员ID不能为空");
         }
@@ -53,5 +54,20 @@ public class MemberServiceImpl extends BaseApiService implements IMemberService 
             return error("会员ID不存在");
         }
         return success(memberUser, "查询成功");
+    }
+
+    /**
+     * 根据ID更新会员用户信息
+     *
+     * @param memberUser
+     * @return
+     */
+    @Override
+    public ResponseBase updateMemberUserById(@RequestBody MemberUser memberUser) {
+        int result = memberUserMapper.update(memberUser);
+        if (result <= 0) {
+            return error("会员信息编辑失败");
+        }
+        return success("会员信息编辑成功");
     }
 }

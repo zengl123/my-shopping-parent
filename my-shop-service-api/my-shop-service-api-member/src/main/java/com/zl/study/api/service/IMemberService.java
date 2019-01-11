@@ -1,11 +1,13 @@
 package com.zl.study.api.service;
 
-import com.zl.study.common.base.ResponseBase;
 import com.zl.study.api.domain.po.MemberUser;
+import com.zl.study.common.base.ResponseBase;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * @Description
@@ -23,19 +25,29 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface IMemberService {
     /**
      * 会员注册
+     *
      * @param memberUser
      * @return
      */
     @ApiOperation(value = "会员注册")
-    @RequestMapping(value = "register",method = RequestMethod.POST)
+    @PostMapping(value = "register")
     ResponseBase register(MemberUser memberUser);
 
     /**
      * 根据ID查询会员用户信息
      *
-     * @param memberUserId
+     * @param id
      * @return
      */
-    @RequestMapping(value = "findMemberUserById")
-    ResponseBase findMemberUserById(String memberUserId);
+    @GetMapping(value = "findMemberUserById/{id}")
+    ResponseBase findMemberUserById(String id);
+
+    /**
+     * 根据ID更新会员用户信息
+     *
+     * @param memberUser
+     * @return
+     */
+    @PostMapping(value = "updateMemberUserById")
+    ResponseBase updateMemberUserById(MemberUser memberUser);
 }

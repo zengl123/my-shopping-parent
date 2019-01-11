@@ -68,13 +68,13 @@
         values
         <foreach collection="list" item="obj" separator=",">(
             (select replace(UUID(), '-', '') as id), 
-            #{obj.userName}, 
-            #{obj.password}, 
-            #{obj.phone}, 
-            #{obj.email}, 
+            #{userName}, 
+            #{password}, 
+            #{phone}, 
+            #{email}, 
             now(), 
             now(), 
-            #{obj.creator}, 
+            #{creator}, 
             'n'
             )
         </foreach>
@@ -95,6 +95,11 @@
         </foreach>
     </delete>
 
+    <delete id="delete">
+        delete from 
+        <include refid="Table"/>
+        <include refid="Condition"/>
+    </delete>
 
     <update id="update">
         update 
@@ -186,6 +191,14 @@
         <foreach collection="list" item="id" separator="," open="(" close=")">
             #{id}
         </foreach>
+    </select>
+
+    <select id="find" resultMap="BaseResultMap">
+        select 
+        <include refid="Base_Column_List"/>
+        from 
+        <include refid="Table"/>
+        <include refid="Condition"/>
     </select>
 
     <select id="findAll" resultMap="BaseResultMap">

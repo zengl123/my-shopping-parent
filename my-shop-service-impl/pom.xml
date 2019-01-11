@@ -39,10 +39,5 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>${mybatis-boot-start.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.mybatis.generator</groupId>
-            <artifactId>mybatis-generator-maven-plugin</artifactId>
-            <version>${mybatis-generator-maven-plugin.version}</version>
-        </dependency>
     </dependencies>
 </project>
