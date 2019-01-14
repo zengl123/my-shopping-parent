@@ -1,4 +1,4 @@
-package com.zl.study.eureka;
+package com.zl.study.basic.eureka;
 
 import static org.junit.Assert.assertTrue;
 

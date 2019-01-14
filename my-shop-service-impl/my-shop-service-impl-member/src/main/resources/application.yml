@@ -65,14 +65,16 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:8100/eureka/
 #swagger配置
 swagger:
-  base-package:
-  title:
-  description:
-  version:
-  terms-of-service-url:
-  contavt:
-    name:
-    email:
+  enabled: true
+  base-package: com.zl.study.api.member.service
+  title: 会员服务接口
+  description: 会员服务接口描述
+  version: v1.0
+  terms-of-service-url: 127.0.0.1:8101/swagger-ui.html
+  contact:
+    url:
+    name: zengling
+    email: 17363645521@163.com
 
 
 

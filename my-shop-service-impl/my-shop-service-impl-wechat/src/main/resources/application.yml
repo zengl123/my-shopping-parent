@@ -16,7 +16,6 @@ spring:
         min-idle: 1
         max-active: 1000
         max-wait: -1ms
-
 #eureka连接信息
 eureka:
   instance:
@@ -26,3 +25,15 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://${eureka.instance.hostname}:8100/eureka/
+#swagger配置
+swagger:
+  enabled: true
+  base-package: com.zl.study.api.wechat.service
+  title: 微信服务接口
+  description: 微信服务接口描述
+  version: v1.0
+  terms-of-service-url: 127.0.0.1:8102/swagger-ui.html
+  contact:
+    url:
+    name: zengling
+    email: 17363645521@163.com

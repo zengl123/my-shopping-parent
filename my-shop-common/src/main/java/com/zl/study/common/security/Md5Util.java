@@ -76,7 +76,7 @@ public class Md5Util {
     }
 
     /**
-     * 普通Md5加密
+     * Md5加密加盐
      *
      * @param origin
      * @return

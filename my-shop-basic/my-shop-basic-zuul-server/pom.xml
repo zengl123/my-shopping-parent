@@ -13,10 +13,11 @@
     <artifactId>my-shop-basic-zuul-server</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-
+    <!--网管依赖Zuul-->
     <dependencies>
-        
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+        </dependency>
     </dependencies>
-
-
 </project>

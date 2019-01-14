@@ -1,6 +1,5 @@
-package com.zl.study.eureka;
+package com.zl.study.basic.eureka;
 
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;

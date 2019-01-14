@@ -3,6 +3,7 @@ package com.zl.studt.impl.wechat;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @Description:<br>
@@ -15,6 +16,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @Version 1.0<br>
  * @Modified By <by>
  */
+@EnableSwagger2
 @SpringBootApplication
 @EnableEurekaClient
 public class WeChatServer {
