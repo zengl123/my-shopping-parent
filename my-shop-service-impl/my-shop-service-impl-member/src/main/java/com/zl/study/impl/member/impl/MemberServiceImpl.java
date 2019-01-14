@@ -1,11 +1,13 @@
-package com.zl.study.member.impl;
+package com.zl.study.impl.member.impl;
 
-import com.zl.study.api.domain.po.MemberUser;
-import com.zl.study.api.service.IMemberService;
+import com.zl.study.api.member.domain.po.MemberUser;
+import com.zl.study.api.member.service.IMemberService;
+import com.zl.study.api.wechat.service.IWeChatService;
 import com.zl.study.common.base.BaseApiService;
 import com.zl.study.common.base.ResponseBase;
 import com.zl.study.common.security.Md5Util;
-import com.zl.study.member.dao.MemberUserMapper;
+import com.zl.study.impl.member.dao.MemberUserMapper;
+import com.zl.study.impl.member.feign.WeChatServiceImplFeign;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,6 +29,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberServiceImpl extends BaseApiService implements IMemberService {
     @Autowired
     private MemberUserMapper memberUserMapper;
+    @Autowired
+    private WeChatServiceImplFeign weChatServiceImplFeign;
 
 
     @Override
@@ -69,5 +73,10 @@ public class MemberServiceImpl extends BaseApiService implements IMemberService 
             return error("会员信息编辑失败");
         }
         return success("会员信息编辑成功");
+    }
+
+    @Override
+    public ResponseBase login() {
+        return weChatServiceImplFeign.login();
     }
 }

@@ -1,6 +1,6 @@
-package com.zl.study.member.dao;
+package com.zl.study.impl.member.dao;
 
-import com.zl.study.api.domain.po.MemberUser;
+import com.zl.study.api.member.domain.po.MemberUser;
 import org.mybatis.generator.api.dom.java.BaseMapper;
 
 /**

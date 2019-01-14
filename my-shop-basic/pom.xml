@@ -16,6 +16,7 @@
 
     <modules>
         <module>my-shop-basic-eureka-server</module>
+        <module>my-shop-basic-zuul-server</module>
     </modules>
 
 </project>

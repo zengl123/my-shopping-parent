@@ -1,4 +1,4 @@
-package com.zl.study.api.domain.po;
+package com.zl.study.api.member.domain.po;
 
 import lombok.Data;
 import org.mybatis.generator.api.dom.java.BaseModel;

@@ -1,7 +1,7 @@
 package com.zl.study;
 
 import com.zl.study.common.utils.ConvertDomainUtil;
-import com.zl.study.api.domain.po.MemberUser;
+import com.zl.study.api.member.domain.po.MemberUser;
 import org.junit.Test;
 
 import java.util.Map;

@@ -1,0 +1,28 @@
+#服务端口
+server:
+  port: 8102
+spring:
+  application:
+    #服务名称
+    name: my-shop-service-impl-wechat
+  #Redis连接信息
+  redis:
+    host: 127.0.0.1
+    password:
+    port: 6379
+    jedis:
+      pool:
+        max-idle: 100
+        min-idle: 1
+        max-active: 1000
+        max-wait: -1ms
+
+#eureka连接信息
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8100/eureka/

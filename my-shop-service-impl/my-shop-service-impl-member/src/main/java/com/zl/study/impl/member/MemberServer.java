@@ -1,10 +1,12 @@
-package com.zl.study.member;
+package com.zl.study.impl.member;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @Description
@@ -19,8 +21,10 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @EnableEurekaClient
+@EnableFeignClients
 @ComponentScan(basePackages = "com.zl.study")
-@MapperScan(basePackages = "com.zl.study.member.dao")
+@MapperScan(basePackages = "com.zl.study.impl.member.dao")
+@EnableSwagger2
 public class MemberServer {
     public static void main(String[] args) {
         SpringApplication.run(MemberServer.class, args);

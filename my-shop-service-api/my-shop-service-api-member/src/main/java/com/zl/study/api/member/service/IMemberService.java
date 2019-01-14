@@ -1,6 +1,6 @@
-package com.zl.study.api.service;
+package com.zl.study.api.member.service;
 
-import com.zl.study.api.domain.po.MemberUser;
+import com.zl.study.api.member.domain.po.MemberUser;
 import com.zl.study.common.base.ResponseBase;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -40,7 +40,7 @@ public interface IMemberService {
      * @return
      */
     @GetMapping(value = "findMemberUserById/{id}")
-    ResponseBase findMemberUserById(String id);
+    ResponseBase findMemberUserById(@PathVariable("id") String id);
 
     /**
      * 根据ID更新会员用户信息
@@ -50,4 +50,11 @@ public interface IMemberService {
      */
     @PostMapping(value = "updateMemberUserById")
     ResponseBase updateMemberUserById(MemberUser memberUser);
+
+    /**
+     * 会员服务调用微信服务
+     * @return
+     */
+    @GetMapping(value = "login")
+    ResponseBase login();
 }

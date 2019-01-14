@@ -1,4 +1,4 @@
-package com.zl.study.member.activemq;
+package com.zl.study.impl.member.activemq;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsMessagingTemplate;
