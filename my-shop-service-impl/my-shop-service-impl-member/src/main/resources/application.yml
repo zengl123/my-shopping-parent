@@ -50,6 +50,9 @@ spring:
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
     #合并多个DruidDataSource的监控数据
     useGlobalDataSourceStat: true
+  #aop配置
+  aop:
+    auto: true
 #mybatis映射文件配置
 mybatis:
   mapper-locations: classpath:mapper/*.xml
@@ -65,8 +68,7 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:8100/eureka/
 #swagger配置
 swagger:
-  enabled: true
-  base-package: com.zl.study.api.member.service
+  base-package: com.zl.study.member.impl
   title: 会员服务接口
   description: 会员服务接口描述
   version: v1.0

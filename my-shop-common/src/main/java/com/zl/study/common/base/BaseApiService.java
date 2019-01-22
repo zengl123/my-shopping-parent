@@ -1,6 +1,5 @@
 package com.zl.study.common.base;
 
-import com.zl.study.common.base.ResponseBase;
 import com.zl.study.common.constant.ResponseCode;
 
 /**
@@ -67,5 +66,4 @@ public class BaseApiService {
     private ResponseBase setResult(Integer code, Boolean status, String message, Object data) {
         return new ResponseBase(code, status, message, data);
     }
-
 }

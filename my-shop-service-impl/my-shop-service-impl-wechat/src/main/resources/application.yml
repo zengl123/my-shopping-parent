@@ -27,8 +27,7 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:8100/eureka/
 #swagger配置
 swagger:
-  enabled: true
-  base-package: com.zl.study.api.wechat.service
+  base-package: com.zl.study.wechat.impl
   title: 微信服务接口
   description: 微信服务接口描述
   version: v1.0

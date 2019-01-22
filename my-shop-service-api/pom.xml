@@ -14,7 +14,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-
     <modules>
         <module>my-shop-service-api-member</module>
         <module>my-shop-service-api-wechat</module>

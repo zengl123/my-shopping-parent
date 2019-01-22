@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
+
 /**
  * @Description
  * @Project my-shopping-parent
@@ -19,7 +21,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ResponseBase {
+public class ResponseBase implements Serializable {
     @ApiModelProperty(value = "响应状态码", name = "code")
     private int code;
     @ApiModelProperty(value = "响应状态", name = "status")
