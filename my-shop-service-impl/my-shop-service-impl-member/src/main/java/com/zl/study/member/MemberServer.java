@@ -1,6 +1,5 @@
 package com.zl.study.member;
 
-import com.zl.study.common.aspect.SysLogAspect;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,6 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
  * @Description
@@ -25,7 +25,6 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableFeignClients
 @EnableDiscoveryClient
 @MapperScan(basePackages = "com.zl.study.member.dao")
-@ComponentScan(basePackageClasses = SysLogAspect.class)
 public class MemberServer {
     public static void main(String[] args) {
         SpringApplication.run(MemberServer.class, args);
